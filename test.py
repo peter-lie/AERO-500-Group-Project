@@ -2,6 +2,7 @@
 
 # Paige Jewell, Peter Lie, Caleb Nalley
 
+from vpython import *
 import numpy as np
 
 # 3D Boids algorithm - be super cool if applicable on satellites
@@ -23,4 +24,7 @@ import numpy as np
 
     # Avoid a rocket
     # Track total delta-v if possible
+    # Plot in vpython
+
+
 
