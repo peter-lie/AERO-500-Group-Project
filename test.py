@@ -38,9 +38,9 @@ import numpy as np
 mu = 398600             # Earth's gravitational parameter (m^3/s^2)
 a = 6978                # semi-major axis (m)
 e = 0                   # eccentricity
-inc = 0                 # inclination in degrees
-raan = 0                # right ascension of ascending node in degrees
-argp = 0                # argument of periapsis in degrees
+inc = np.pi/2                 # inclination in rads
+raan = 0                # right ascension of ascending node in rads
+argp = 0                # argument of periapsis in rads
 
 from COE2RV import coe_to_rv
 
