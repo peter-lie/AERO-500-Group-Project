@@ -38,7 +38,7 @@ import numpy as np
 mu = 398600             # Earth's gravitational parameter (m^3/s^2)
 a = 6978                # semi-major axis (m)
 e = 0                   # eccentricity
-inc = np.pi/2                 # inclination in rads
+inc = 0                 # inclination in rads
 raan = 0                # right ascension of ascending node in rads
 argp = 0                # argument of periapsis in rads
 
