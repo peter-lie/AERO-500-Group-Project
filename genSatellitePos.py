@@ -25,7 +25,7 @@ def genSatellitePos(numSats):
     yInit = 0 #[km]
     zInit = 0 #[km]
     
-    xDist = 15 #spacing [km]
+    xDist = 10 #spacing [km]
     
     satPos = np.zeros((3, numSats))
     satPos[:,0] = [xInit, yInit, zInit]

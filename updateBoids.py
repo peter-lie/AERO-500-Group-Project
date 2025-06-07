@@ -83,7 +83,9 @@ def update_boids(pos, vel, nominal, debris_spheres, dt=1.0):
             debris_pos = np.array([d.pos.x, d.pos.y, d.pos.z])
             rel_pos = pos[:, i] - debris_pos
             dist = np.linalg.norm(rel_pos)
-            if dist < DODGE_RADIUS:
+            # d.size = debris_objects[d]["size"]
+            # print(d.size)
+            if dist < DODGE_RADIUS + d.size.x:
                 dodge_dir = np.cross(np.array([0, -1, 0]), rel_pos)  # lateral to falling direction
                 if np.linalg.norm(dodge_dir) > 0:
                     dodge_dir = dodge_dir / np.linalg.norm(dodge_dir)
