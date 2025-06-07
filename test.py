@@ -12,11 +12,8 @@ import numpy as np
 # import COE2RV
 
 # 3D Boids algorithm - be super cool if applicable on satellites
-
 # Start with orbital motion
-
 # Implement collision avoidance - like geese agents
-
 
 # Orbital motion goals:
     # Start scenario similar to rocket release
@@ -32,14 +29,12 @@ import numpy as np
     # Track total delta-v if possible
     # Plot in vpython
 
-
-
 # Parameters (adjustable)
 mu = 398600             # Earth's gravitational parameter (m^3/s^2)
 a = 6978                # semi-major axis (m)
 e = 0                   # eccentricity
-inc = 0                 # inclination in rads
-raan = 0                # right ascension of ascending node in rads
+inc = np.pi/8                 # inclination in rads
+raan = -np.pi/2                # right ascension of ascending node in rads
 argp = 0                # argument of periapsis in rads
 
 from COE2RV import coe_to_rv
@@ -47,7 +42,7 @@ from COE2RV import coe_to_rv
 r0, v0 = coe_to_rv(a, e, inc, raan, argp, 0)
 
 # Scene setup
-scene = canvas(title="Satellite Orbit in ECI Frame (Differential Equation Method)",
+scene = canvas(title="Satellite Orbit in ECI Frame",
                width=800, height=600, range=2 * a, autoscale=False)
 scene.forward = vector(0, 2, -1)  # view from above
 scene.up = vector(0, 1, 0)
