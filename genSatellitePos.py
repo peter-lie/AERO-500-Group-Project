@@ -21,11 +21,11 @@ def genSatellitePos(numSats):
     yUncertainty = 10 #[km]
     zUncertainty = 10 #[km]
     
-    xInit = 100 #[km]
-    yInit = 50 #[km]
-    zInit = 50 #[km]
+    xInit = 50 #[km]
+    yInit = 0 #[km]
+    zInit = 0 #[km]
     
-    xDist = 10 #spacing [km]
+    xDist = 15 #spacing [km]
     
     satPos = np.zeros((3, numSats))
     satPos[:,0] = [xInit, yInit, zInit]

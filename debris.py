@@ -7,7 +7,7 @@ NUM_OBJECTS = 100          # number of objects
 SIZE_MEAN = 1.0          # mean size of sphere (km)
 SIZE_STD = 0.5          # size standard deviation
 POS_MEAN = 0.0           # mean position coordinate
-POS_STD = 15.0            # position standard deviation
+POS_STD = 25.0            # position standard deviation
 
 # ---------------------- data generation --------------------
 def generate_objects(n=NUM_OBJECTS):
@@ -29,9 +29,7 @@ def generate_objects(n=NUM_OBJECTS):
 
 # ---------------------- visualisation ----------------------
 def visualize_objects(objects):
-    scene = canvas(title="Randomly-sized Objects",
-                   width=800, height=600,
-                   background=color.black)
+    # scene = canvas(title="Randomly-sized Objects", width=800, height=600, background=color.black)
 
     # wire-frame cube (12 edges)
     half = 50
@@ -57,7 +55,7 @@ def visualize_objects(objects):
                    radius=obj["size"] / 2.0,
                    color=palette[obj["id"] % len(palette)],
                    make_trail=False)
-        s.velocity = vector(0, -5, 0)   # 5 units / s in −y
+        s.velocity = vector(0, -10, 0)   # 5 units / s in −y
         spheres.append(s)
     return spheres
 
